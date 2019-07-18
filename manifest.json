@@ -1,0 +1,37 @@
+{
+  "manifest_version": 2,
+
+  "name": "Referaller",
+  "description": "Инструмент для добавления реферальных частей к определенным сайтам",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+
+  "background": {
+    "scripts": [
+      "background.js"
+    ],
+    "persistent": false
+  },
+
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "lib/jQuery.js",
+        "lib/bootstrap.min.js",
+        "js/main.js"
+      ]
+    }
+  ],
+
+  "permissions": [
+    "tabs",
+    "storage"
+  ]
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        body {
+            width: 600px;
+            padding: 10px;
+        }
+
+        .list-row:not(:last-child) {
+            border-bottom: 1px dashed gray;
+        }
+
+        .list-field {
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            line-height: 30px;
+        }
+
+        .invalid {
+            border: 1px solid red;
+        }
+
+        .list-container {
+            max-height: 500px;
+            overflow-y: scroll;
+        }
+    </style>
+    <title>Referaller</title>
+</head>
+<body>
+    <h6>Текущие ссылки</h6>
+    <div id="list" class="container-fluid list-container"></div>
+    <hr>
+    <div id="add__form">
+        <div class="row">
+            <div class="col">
+                <input id="input-link" type="text" class="form-control" placeholder="Сайт">
+            </div>
+            <div class="col">
+                <input id="input-referal" type="text" class="form-control" placeholder="Referal">
+            </div>
+        </div>
+        <button id="add-btn" class="btn btn-primary mt-2 btn-block">Добавить</button>
+    </div>
+
+    <script src="lib/jQuery.js"></script>
+    <script src="lib/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
